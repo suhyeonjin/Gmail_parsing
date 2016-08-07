@@ -92,11 +92,11 @@ def get_mail(date_,g):
 	print '[+]',year_, month_, day_ 
 
 	#except url list manage dic
-	#dic_ = {'http://me2.do/xWbrYn85':'https://osint.xyz/bob/whereami.jpg','http://me2.do/5gCPJlT0':'https://osint.xyz/bob/%EC%9A%B0ahh%ED%95%98ga(¿ìahhÇÏga).jpg','http://me2.do/xWbrYn85':'https://osint.xyz/bob/whereami.jpg','https://goo.gl/kjhof3':'https://osint.xyz/bob/Whyjpg'}
+	#dic_ = {'http://me2.do/xWbrYn85':'https://osint.xyz/bob/whereami.jpg','http://me2.do/5gCPJlT0':'https://osint.xyz/bob/%EC%9A%B0ahh%ED%95%98ga(ìš°ahhí•˜ga).jpg','http://me2.do/xWbrYn85':'https://osint.xyz/bob/whereami.jpg','https://goo.gl/kjhof3':'https://osint.xyz/bob/Whyjpg'}
 	dic_ = {'https://goo.gl/kjhof3':'https://osint.xyz/bob/Why...jpg'}
 
 	#read_mail user setting
-	unread = g.inbox().mail(sender='fl0ckfl0ck@hotmail.com', on = datetime.date(int(year_), int(month_), int(day_)))
+	unread = g.inbox().mail(sender='Sender_email', on = datetime.date(int(year_), int(month_), int(day_)))
 	#unread = g.label("Forensic").mail(before=datetime.date(int(year_b),int(month_b),int(day_b)+1))
 
 	i = 1
@@ -219,7 +219,7 @@ if __name__ == "__main__":
 	#default_directory set
 	xml_path = os.path.dirname( os.path.abspath( __file__ ) )
 	default_directory = os.path.dirname( os.path.abspath( __file__ ) )+'\\result\\'
-	if os.path.isdir(default_directory) == False:#directory °¡ Á¸ÀçÇÏÁö ¾ÊÀ¸¸é
+	if os.path.isdir(default_directory) == False:#directory ê°€ ì¡´ìž¬í•˜ì§€ ì•Šìœ¼ë©´
 		os.mkdir(default_directory)
 		os.chdir(default_directory)
 	else:
@@ -228,7 +228,7 @@ if __name__ == "__main__":
 	today_directory = default_directory+str(Today)
 
 	#check directory before make directory
-	if os.path.isdir(today_directory) == False:#directory °¡ Á¸ÀçÇÏÁö ¾ÊÀ¸¸é
+	if os.path.isdir(today_directory) == False:#directory ê°€ ì¡´ìž¬í•˜ì§€ ì•Šìœ¼ë©´
 		os.mkdir(today_directory)
 		os.chdir(today_directory)
 	else:
